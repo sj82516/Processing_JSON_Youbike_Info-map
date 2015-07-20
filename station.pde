@@ -19,7 +19,7 @@ public class Station extends SimplePointMarker{
     tot = _tot;
     sbi = _sbi;
   }
-  //內建函式，定義標記格式內建函式，定義標記格式
+  //定義標記格式
   public void draw(PGraphics pg, float x, float y) {
     pg.pushStyle();
     pg.pushMatrix();
