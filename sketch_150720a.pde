@@ -38,6 +38,7 @@ void draw(){
   map.draw();
 }
 
+//檢查滑鼠移動位置
 void mouseMoved() {
   // Deselect all marker
   for (Marker marker : map.getMarkers()) {
