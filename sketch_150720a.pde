@@ -16,7 +16,7 @@ void setup(){
   //map函式初始化
   map = new UnfoldingMap(this, "map");
   //地圖聚焦的經緯度以及放大程度
-  map.zoomAndPanTo(new Location(25.05f, 121.55f), 12);
+  map.zoomAndPanTo(new Location(25.05f, 121.55f), 13);
   MapUtils.createDefaultEventDispatcher(this, map);
   
   //第一步驟
@@ -48,6 +48,10 @@ void mouseMoved() {
   // 檢查滑鼠移動位置，如果剛好移到地點上，出現設定的標籤
   Marker marker = map.getFirstHitMarker(mouseX, mouseY);
   if (marker != null) {
+    println(marker.getLocation().toString());
+    //利用Key(鍵)去讀值
+    println(marker.getProperty("tot").toString());
+    println(marker.getProperty("sbi").toString());
     marker.setSelected(true);
   }
 }
